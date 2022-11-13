@@ -1,7 +1,7 @@
 # JENKINS INSTALLATION ON UBUNTU
 
 
-Please Like & Subscribe My Channel To Motivate Me  
+#### `**** Please Like & Subscribe My Channel To Motivate Me ****`
 
 
 #### Install Java  Prerequisite
@@ -36,15 +36,17 @@ $ sudo systemctl status jenkins
 
 
 #### Access Jenkins via Browser
+```
 http://[public_server_ip]:8080 
-
+```
 
 <br />
 
 
 #### Update firewall rules in SG 
+```
 Open Port : 8080
-
+```
 
 <br />
 
@@ -65,8 +67,8 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 <br />
 
-
-Please Like & Subscribe My Channel To Motivate Me  
+#### `**** Please Like & Subscribe My Channel To Motivate Me ****`
+  
 
 We'll provide DevOps real time project in upcoming video in this channel. So please subscribe my channel.
 
