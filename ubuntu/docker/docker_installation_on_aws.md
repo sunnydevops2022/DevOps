@@ -4,13 +4,21 @@
 #### `**** Please Like & Subscribe My Channel To Motivate Me ****`
 
 
-#### Uninstall old versions
-
+#### Switch to root user & change hostname
 ```
 sudo -i
 
+hostnamectl set-hostname docker
+```
+
+<br/>
+
+#### Uninstall old versions
+
+```
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
+
 <br/>
 
 #### Set up the repository
