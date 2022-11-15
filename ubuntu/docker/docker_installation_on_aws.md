@@ -9,6 +9,8 @@
 sudo -i
 
 hostnamectl set-hostname docker
+
+bash
 ```
 
 <br/>
