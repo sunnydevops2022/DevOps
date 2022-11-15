@@ -26,7 +26,7 @@ sudo apt-get install \
 
 <br/>
 
-Add Docker’s official GPG key
+#### Add Docker’s official GPG key
 ```
 sudo mkdir -p /etc/apt/keyrings
 
