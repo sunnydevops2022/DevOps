@@ -6,6 +6,8 @@
 ## Prerequisite
 - Install Docker => https://www.youtube.com/watch?v=G7HgR_2Onks
 
+<br/>
+
 #### Check Docker service status
 ```
 systemctl status docker
