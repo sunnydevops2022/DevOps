@@ -3,8 +3,10 @@
 
 #### `**** Please Like & Subscribe My Channel To Motivate Me ****`
 
+## Prerequisite
+- Install Docker => https://www.youtube.com/watch?v=G7HgR_2Onks
 
-#### Start Docker service status
+#### Check Docker service status
 ```
 systemctl status docker
 ```
