@@ -8,14 +8,14 @@
 
 <br/>
 
-#### Check Docker service status
+#### STEP 1: Check Docker service status
 ```
 systemctl status docker
 ```
 
 <br/>
 
-#### Check docker version
+#### STEP 2: Check docker version
 
 ```
 docker version
@@ -25,7 +25,7 @@ docker --version
 
 <br/>
 
-#### Check any docker container or images exist or not
+#### STEP 3: Check any docker container or images exist or not
 ```
 docker container ls
 
@@ -34,7 +34,7 @@ docker image ls
 
 <br/>
 
-#### Create a directory & change permission of that directory
+#### STEP 4: Create a directory & change permission of that directory
 ```
 mkdir my_jenkins
 
@@ -45,7 +45,7 @@ ls -ld my_jenkins/
 
 <br/>
 
-#### Finally will run jenkins on docker container
+#### STEP 5: Finally will run jenkins on docker container
 ```
 docker run -itd -p 8080:8080 -p 50000:50000 -v /root/my_jenkins:/var/jenkins_home jenkins/jenkins:lts-jdk11
 
@@ -54,7 +54,7 @@ docker container ls
 
 <br/>
 
-#### Now we'll try to open jenkins dashboard from browser
+#### STEP 6: Now we'll try to open jenkins dashboard from browser
 ```
 http:[server_ip_add:8080]
 
@@ -64,7 +64,7 @@ NOTE: Open port 8080 in security group
 
 <br/>
 
-#### Get password from jenkins container 
+#### STEP 7: Get password from jenkins container 
 ```
 docker exec -it bda3398d0842 /bin/bash
 
