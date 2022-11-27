@@ -1,6 +1,6 @@
 # +++++ MINIKUBE INSTALLATION +++++
 
-## 🔥 👉 👉  Please Like & Subscribe My Channel To Motivate Me 🔥 🙏 👍
+## 🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍
 
 #### What you’ll need (Prerequisite)
 ```
@@ -135,10 +135,10 @@ $ kubectl get po
 $ minikube delete --all
 ```
 
-#### `**** Please Like & Subscribe My Channel To Motivate Me ****`
+## 🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍
 
 You will get all steps github repo link in the description box & you will get important video's link related to DevOps.
 
-We'll provide DevOps real time project in upcoming video in this channel. So please subscribe my channel.
+👉 We'll provide DevOps real time project in upcoming video in this channel. So please subscribe my channel.
 
 ## `*************************   EOF   *************************`
