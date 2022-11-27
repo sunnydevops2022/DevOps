@@ -1,6 +1,6 @@
 # +++++ MINIKUBE INSTALLATION +++++
 
-## **** Please Like & Subscribe My Channel To Motivate Me ****
+## 🔥 👉 👉  Please Like & Subscribe My Channel To Motivate Me 🔥 🙏 👍
 
 #### What you’ll need (Prerequisite)
 ```
@@ -124,7 +124,7 @@ spec:
 #### Run & check Nginx Pod status
 ```
 $ kubectl apply -f pod.yml
-$ kubectl get pod
+$ kubectl get po
 ```
 
 <br/>
