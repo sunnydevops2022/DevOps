@@ -1,6 +1,8 @@
-# +++++ MINIKUBE INSTALLATION +++++
+<h1 align="center">🔥 MINIKUBE INSTALLATION ON UBUNTU 🔥</h1>
 
-## 🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍
+<h2 align="center">🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍</h2>
+
+<br/>
 
 #### What you’ll need (Prerequisite)
 ```
