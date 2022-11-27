@@ -2,6 +2,9 @@
 
 <h2 align="center">🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍</h2>
 
+<br />
+
+## 🔹STEP-1
 #### Update Ubuntu packages
 ```
 $ sudo -i
@@ -10,6 +13,7 @@ $ apt-get update
 
 <br />
 
+## 🔹STEP-2
 #### Change hostname
 ```
 $ hostnamectl set-hostname terraform
@@ -19,7 +23,7 @@ $ hostname
 
 <br />
 
-
+## 🔹STEP-3
 #### Check Terraform version exist or not ?
 ```
 $ terraform -v
@@ -27,6 +31,7 @@ $ terraform -v
 
 <br />
 
+## 🔹STEP-4
 #### Install Terraform
 ```
 $ wget https://releases.hashicorp.com/terraform/1.3.4/terraform_1.3.4_linux_amd64.zip
@@ -38,6 +43,7 @@ $ cp terraform /usr/bin/
 
 <br />
 
+## 🔹STEP-5
 #### Now check Terraform version
 ```
 $ terraform -v
