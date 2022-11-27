@@ -14,7 +14,7 @@ NOTE : "t3.small" perfect suit for this lab
 
 <br/>
 
-## STEP-1
+## 🔹STEP-1
 #### Change hostname
 ```
 $ whoami
@@ -25,7 +25,7 @@ $ hostname
 
 <br/>
 
-## STEP-2
+## 🔹STEP-2
 #### Update Ubuntu packages install required package for this lab
 ```
 $ sudo apt-get update -y
@@ -34,7 +34,7 @@ $ sudo apt-get install apt-transport-https curl conntrack
 
 <br/>
 
-## STEP-3
+## 🔹STEP-3
 #### Install Docker
 ```
 $ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -48,7 +48,7 @@ $ docker --version
 
 <br/>
 
-## STEP-4
+## 🔹STEP-4
 #### Install Kubectl
 ```
 $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl &&   chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl
@@ -60,7 +60,7 @@ $ kubectl version --short
 
 <br/>
 
-## STEP-5
+## 🔹STEP-5
 #### Install Minikube
 ```
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -71,7 +71,7 @@ $ minikube version
 
 <br/>
 
-## STEP-6
+## 🔹STEP-6
 #### Start Minikube
 ```
 $ kubectl cluster-info
@@ -82,7 +82,7 @@ $ kubectl cluster-info
 
 <br/>
 
-## STEP-7
+## 🔹STEP-7
 #### Check Minikube status
 ```
 $ minikube status
@@ -91,7 +91,7 @@ $ kubectl get nodes
 
 <br/>
 
-## STEP-8
+## 🔹STEP-8
 #### Check Minikube all component status
 ```
 $ kubectl get po -A
@@ -99,7 +99,7 @@ $ kubectl get po -A
 
 <br/>
 
-## STEP-9
+## 🔹STEP-9
 #### Create Nginx pod to validate our 1 node minikube cluster
 ```
 $ vim pod.yml
@@ -120,7 +120,7 @@ spec:
 
 <br/>
 
-## STEP-10
+## 🔹STEP-10
 #### Run & check Nginx Pod status
 ```
 $ kubectl apply -f pod.yml
@@ -129,7 +129,7 @@ $ kubectl get po
 
 <br/>
 
-## STEP-11
+## 🔹STEP-11
 #### Delete minikube cluster
 ```
 $ minikube delete --all
