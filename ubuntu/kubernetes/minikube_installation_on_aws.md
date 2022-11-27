@@ -5,10 +5,9 @@
 #### What you’ll need (Prerequisite)
 ```
 - 2 CPUs or more
-- 2GB of free memory
-- 20GB of free disk space
+- 2 GB of free memory
+- 20 GB of free disk space
 - Internet connection
-
 
 NOTE : "t3.small" perfect suit for this lab
 ```
@@ -20,7 +19,7 @@ NOTE : "t3.small" perfect suit for this lab
 ```
 $ whoami
 $ sudo hostnamectl set-hostname terraform
-$ sudo bash
+$ bash
 $ hostname
 ```
 
@@ -43,6 +42,8 @@ $ sudo sh get-docker.sh
 $ ls -l /var/run/docker.sock
 $ id
 $ sudo usermod -aG docker $USER && newgrp docker
+$ id
+$ docker --version
 ```
 
 <br/>
@@ -65,8 +66,6 @@ $ kubectl version --short
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 $ ls -l 
 $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
-### sudo mv minikube-linux-amd64 /usr/local/bin/minikube
-### sudo chmod +x /usr/local/bin/minikube
 $ minikube version
 ```
 
@@ -77,6 +76,8 @@ $ minikube version
 ```
 $ kubectl cluster-info
 $ minikube start
+
+$ kubectl cluster-info
 ```
 
 <br/>
@@ -85,6 +86,7 @@ $ minikube start
 #### Check Minikube status
 ```
 $ minikube status
+$ kubectl get nodes
 ```
 
 <br/>
@@ -119,6 +121,15 @@ spec:
 <br/>
 
 ## STEP-10
+#### Check Pod status
+```
+$ kubectl apply -f pod.yml
+$ $ kubectl get po
+```
+
+<br/>
+
+## STEP-11
 #### Delete minikube cluster
 ```
 $ minikube delete --all
