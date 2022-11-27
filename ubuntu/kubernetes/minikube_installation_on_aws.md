@@ -100,7 +100,7 @@ $ kubectl get po -A
 <br/>
 
 ## STEP-9
-#### Create pod to validate our 1 node minikube cluster
+#### Create Nginx pod to validate our 1 node minikube cluster
 ```
 $ vim pod.yml
 ```
@@ -121,10 +121,10 @@ spec:
 <br/>
 
 ## STEP-10
-#### Check Pod status
+#### Run & check Nginx Pod status
 ```
 $ kubectl apply -f pod.yml
-$ $ kubectl get po
+$ kubectl get pod
 ```
 
 <br/>
