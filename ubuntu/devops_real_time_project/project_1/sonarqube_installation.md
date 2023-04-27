@@ -1,10 +1,13 @@
+## SONARQUBE INSTALLATION
+
+#### Update repository of ubuntu
 ```
 Download URL:  https://www.sonarsource.com/products/sonarqube/downloads/
 
-## Update repository of ubuntu
 sudo apt update
+```
 
-
+```
 ## Change time zone
 vim .profile
 
