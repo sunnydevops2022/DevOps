@@ -48,6 +48,7 @@ mv sonarqube-10.0.0.68432 sonarqube
 ```
 useradd -d /opt/sonarqube sonar
 cat /etc/passwd | grep sonar
+ls -l /opt/sonarqube
 chown -R sonar:sonar /opt/sonarqube
 ls -l /opt/sonarqube
 ```
@@ -85,9 +86,13 @@ ls -l /etc/systemd/system/sonarqube.service
 9000
 ```
 
-### Service start & enable
+### Service start
 ```
 systemctl start sonarqube.service
+```
+
+### Service enable & check status
+```
 systemctl enable sonarqube.service
 systemctl status sonarqube.service
 ```
@@ -99,7 +104,7 @@ netstat -plant | grep 9000
 
 ### Open sonarqube on browser
 ```
-URL:   http://192.168.1.70:9000/projects/create
+URL:   http://192.168.1.70:9000
 
 U: admin
 P: admin
