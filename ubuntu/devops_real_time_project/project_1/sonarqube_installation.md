@@ -9,12 +9,15 @@ sudo apt update
 
 ### Change time zone
 ```
+date
 vim .profile
 
 # Add end of the file
 TZ='Asia/Kolkata'; export TZ
 
 source .profile
+bash
+date
 ```
 
 ### Change time hostname
