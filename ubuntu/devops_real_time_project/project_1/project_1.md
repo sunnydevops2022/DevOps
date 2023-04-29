@@ -1,6 +1,50 @@
 # +++++ Project-1 +++++
 
-#### `**** Please Like & Subscribe My Channel To Motivate Me ****`
+
+### Pre-requisites
+1. **[Install Jenkins](https://github.com/sunnydevops2022/DevOps/blob/master/ubuntu/devops_real_time_project/project_1/jenkins_installation_p1.md)**
+1. 1. **[Install Ansible](https://github.com/sunnydevops2022/DevOps/blob/master/ubuntu/devops_real_time_project/project_1/jenkins_installation_p1.md)**
+1. Install Kubernetes Cluster
+1. Git Account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 #### Via Root user
 ```
@@ -14,7 +58,7 @@ $ su - devops-user
 
 <br />
 
-#### Update Ubuntu packages
+#### Update Ubuntu repository
 ```
 $ whoami
 $ sudo apt-get update
@@ -322,7 +366,7 @@ manage jenkins > Configure system > Publish Over SSH >
 
 #### sdf
 ```
-go to job > Post-build Actions > send build artifact over ssh > 
+Go to job > Post-build Actions > send build artifact over ssh > 
 
 ```
 ```
@@ -330,7 +374,8 @@ cd /opt/playbooks
 ansible-playbook create_docker_container.yml
 ```
 
-
+<br/>
+<br/>
 
 #### Github Webhook integration with Jenkins
 ```
