@@ -2,8 +2,6 @@
 
 #### Update repository of ubuntu
 ```
-Download URL:  https://www.sonarsource.com/products/sonarqube/downloads/
-
 sudo apt update
 ```
 
@@ -22,7 +20,7 @@ date
 
 ### Change time hostname
 ```
-hostnamectl set-hostname jenkins
+hostnamectl set-hostname jenkins-ansible
 bash
 ```
 
