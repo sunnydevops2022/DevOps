@@ -57,5 +57,16 @@ netstat -plant | grep 8080
 
 ### Open jenkins on browser
 ```
-URL:   http://192.168.1.70:8080
+URL:   http://<jenkins_server_ip>:8080
 ```
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+## ++++++++++++++++++ ANSIBLE ++++++++++++++++++
+
+
+
+## `*************************   EOF   *************************`
