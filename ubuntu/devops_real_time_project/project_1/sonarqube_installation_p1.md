@@ -39,7 +39,7 @@ java -version
 cd /opt/
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.0.0.68432.zip
 OR
-wget wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.2.46101.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.2.46101.zip
 unzip sonarqube-10.0.0.68432.zip
 mv sonarqube-10.0.0.68432 sonarqube
 ```
