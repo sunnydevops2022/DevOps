@@ -81,7 +81,7 @@ EOL
 ls -l /etc/systemd/system/sonarqube.service
 ```
 
-### Open port 9000 from firewalld OR security group.
+### Open port 9000 from firewalld OR security group
 ```
 9000
 ```
@@ -97,7 +97,7 @@ systemctl enable sonarqube.service
 systemctl status sonarqube.service
 ```
 
-### check 9000 port is used or not
+### Check 9000 port is used or not
 ```
 netstat -plant | grep 9000
 ```
@@ -112,7 +112,7 @@ P: admin
 New Pass: admin@123
 ```
 
-## Jenins Integration step temp
+## Jenkins integration step temp
 ```
 - Magage jenkins > configure system > Global properties > sonar_token
 - Magage jenkins > configure system > Global properties > docker_user
