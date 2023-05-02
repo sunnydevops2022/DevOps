@@ -9,6 +9,7 @@ Date:  02-May-2023
 1. Install Jenkins
 1. Install Ansible
 1. Install Apache Maven
+1. Install Sonarqube
 1. Install Kubernetes Cluster
 1. Git Account
 1. Dockerhub Account
@@ -24,6 +25,8 @@ Date:  02-May-2023
 
 1. **[Install Jenkins & Ansible ](https://github.com/sunnydevops2022/DevOps/blob/master/ubuntu/devops_real_time_project/project_1/jenkins_ansible_installation_p1.md)**
 
+1. **[Install Sonarqube](https://github.com/sunnydevops2022/DevOps/blob/master/ubuntu/devops_real_time_project/project_1/sonarqube_installation_p1.md)**
+
 1. **[Install Kubernetes Cluster](https://github.com/sunnydevops2022/DevOps/blob/master/ubuntu/devops_real_time_project/project_1/kubernetes_installation_p1.md)**
 
 1. **[Git Account](https://github.com/)**
@@ -38,7 +41,23 @@ Date:  02-May-2023
 
 ## +++++++++++++++++++++++++++ DAY 2 ++++++++++++++++++++++++++++
 
+## Jenkins integration with Sonarqube server.
 
+### Go to Jenkins and install SonarQube Scanner plugin.
+```
+Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
+                                                                                            kind: Secret text
+                                                                                            Scope: Global
+                                                                                            Secret: token
+                                                                                            ID: SONAR_TOKEN
+                                                                                            Des: SONAR_TOKEN
+Create
+```
+
+## Password less authentication with Kubernetes server.
+```
+pending
+```
 
 <br/>
 <br/>

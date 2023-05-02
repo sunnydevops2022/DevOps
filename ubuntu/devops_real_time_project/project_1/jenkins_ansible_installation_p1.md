@@ -58,7 +58,7 @@ systemctl enable jenkins
 systemctl status jenkins
 ```
 
-### check 8080 port is used or not
+### Check 8080 port is used or not
 ```
 netstat -plant | grep 8080
 ```
