@@ -100,5 +100,25 @@ ansible --version
 
 <br/>
 <br/>
+<br/>
+<br/>
+
+## ++++++++++++++++++ MAVEN INSTALLATION ++++++++++++++++++
+
+
+### Configure Maven on Jenkins server
+```
+wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
+
+vim ~/.bashrc
+
+## Add end of the file & save it.
+export M2_HOME=/opt/apache-maven-3.9.1
+export PATH=$PATH:$M2_HOME/bin
+
+source ~/.bashrc
+
+mvn -version
+```
 
 ## `*************************   EOF   *************************`
