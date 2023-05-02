@@ -105,9 +105,13 @@ ansible --version
 
 ## ++++++++++++++++++ MAVEN INSTALLATION ++++++++++++++++++
 
-### Configure Maven on Jenkins server
+### Check version before install
 ```
 mvn --version
+```
+
+### Change dir to /opt and download maven
+```
 cd /opt/
 ls
 wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
@@ -116,7 +120,10 @@ unzip apache-maven-3.9.1-bin.zip
 ls
 rm -rf apache-maven-3.9.1-bin.zip
 ls
+```
 
+### Configure maven home path
+```
 vim ~/.bashrc
 
 ## Add end of the file & save it.
@@ -124,7 +131,10 @@ export M2_HOME=/opt/apache-maven-3.9.1
 export PATH=$PATH:$M2_HOME/bin
 
 source ~/.bashrc
+```
 
+### Check version again now
+```
 mvn --version
 mvn --help
 ```
