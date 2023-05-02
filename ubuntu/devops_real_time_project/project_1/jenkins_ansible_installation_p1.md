@@ -1,8 +1,9 @@
-## JENKINS INSTALLATION
+## ++++++++++++++++++ JENKINS INSTALLATION ++++++++++++++++++
 
 #### Update repository of ubuntu
 ```
-sudo apt update
+sudo -i
+sudo apt-get update
 ```
 
 ### Change time zone
@@ -20,15 +21,16 @@ date
 
 ### Change time hostname
 ```
+hostname
 hostnamectl set-hostname jenkins-ansible
 bash
+hostname
 ```
 
 ### Install Java
 ```
 java -version
-apt-get install openjdk-17-jdk -y       ## For sonarqube-10.0.0.68432.zip
-apt-get install openjdk-11-jdk -y       ## For sonarqube-8.9.2.46101.zip
+apt-get install openjdk-11-jdk 
 java -version         
 ```
 
@@ -40,9 +42,9 @@ curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-  
+
 sudo apt-get update
-sudo apt-get install jenkins
+sudo apt-get install jenkins=2.361.3
 ```
 
 ### Service start
@@ -61,18 +63,42 @@ systemctl status jenkins
 netstat -plant | grep 8080
 ```
 
-### Open jenkins on browser
+### Check version & Open jenkins on browser
 ```
+jenkins --version
+
 URL:   http://<jenkins_server_ip>:8080
 ```
 
+### Get Jenkins Administrator password using this command
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
 <br/>
 <br/>
 <br/>
 <br/>
 
-## ++++++++++++++++++ ANSIBLE ++++++++++++++++++
+## ++++++++++++++++++ ANSIBLE INSTALLATION ++++++++++++++++++
 
+### Add Ansible repository
+```
+sudo apt-add-repository ppa:ansible/ansible
+```
 
+### Now fetch latest update & install Ansible
+```
+sudo apt update
+sudo apt-get install ansible
+```
+
+### Now check Ansible version
+```
+ansible --version
+```
+
+<br/>
+<br/>
 
 ## `*************************   EOF   *************************`
