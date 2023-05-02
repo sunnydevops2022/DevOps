@@ -26,10 +26,7 @@ bash
 
 ### Install Java
 ```
-java -version
-apt-get install openjdk-17-jdk -y       ## For sonarqube-10.0.0.68432.zip
-apt-get install openjdk-11-jdk -y       ## For sonarqube-8.9.2.46101.zip
-java -version         
+Pending        
 ```
 
 
