@@ -104,7 +104,7 @@ netstat -plant | grep 9000
 
 ### Open sonarqube on browser
 ```
-URL:   http://192.168.1.70:9000
+URL:   http://<sonarqube_ip>:9000
 
 U: admin
 P: admin
