@@ -2,7 +2,7 @@
 
 ### Last Tested
 ```
-Date:  04-May-2023
+Date:  05-May-2023
 ```
 
 ### Pre-Requisites
@@ -56,7 +56,17 @@ Create
 
 ## Password less authentication with Kubernetes server.
 ```
-pending
+vim /etc/ansible/hosts
+
+[kubernetes]
+192.168.1.50
+
+
+ansible -m ping all
+ssh root@192.168.1.50
+ssh-keygen
+ssh-copy-id root@192.168.1.50
+ssh root@192.168.1.50
 ```
 
 <br/>
