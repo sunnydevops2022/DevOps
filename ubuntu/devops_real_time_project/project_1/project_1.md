@@ -59,14 +59,14 @@ Create
 vim /etc/ansible/hosts
 
 [kubernetes]
-192.168.1.50
+<kubernetes_ip>
 
 
 ansible -m ping all
-ssh root@192.168.1.50
+ssh root@<kubernetes_ip>
 ssh-keygen
-ssh-copy-id root@192.168.1.50
-ssh root@192.168.1.50
+ssh-copy-id root@<kubernetes_ip>
+ssh root@<kubernetes_ip>
 ```
 
 <br/>
