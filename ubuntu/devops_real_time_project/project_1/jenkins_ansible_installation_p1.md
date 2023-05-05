@@ -9,13 +9,9 @@ sudo apt-get update
 ### Change time zone
 ```
 date
-vim .profile
-
-# Add end of the file
-TZ='Asia/Kolkata'; export TZ
-
-source .profile
-bash
+timedatectl
+sudo timedatectl set-timezone Asia/Kolkata
+timedatectl
 date
 ```
 
