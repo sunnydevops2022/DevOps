@@ -46,6 +46,8 @@ Date:  05-May-2023
 
 ## Jenkins integration with Sonarqube server.
 
+<br/>
+
 ### Go to Jenkins and install SonarQube Scanner plugin.
 ```
 Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
@@ -56,14 +58,25 @@ Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestrict
                                                                                             Des: SONAR_TOKEN
 Create
 ```
+<br/>
 
 ## Password less authentication with Kubernetes server.
 ```
+## ON KUBERNETES SERVER 
+
+cp -r /etc/ssh/sshd_config /etc/ssh/sshd_config_orig
+sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" /etc/ssh/sshd_config
+systemctl restart sshd.service
+
++++++++++++++++++++++++++++++++++++++
+
+## ON ANSIBLE SERVER
+
 vim /etc/ansible/hosts
 
 [kubernetes]
 <kubernetes_ip>
-
 
 ansible -m ping all
 ssh root@<kubernetes_ip>
@@ -71,6 +84,7 @@ ssh-keygen
 ssh-copy-id root@<kubernetes_ip>
 ssh root@<kubernetes_ip>
 ```
+<br/>
 
 ## Create credential for Dockerhub server login.
 ```
