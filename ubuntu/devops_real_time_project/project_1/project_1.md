@@ -44,7 +44,23 @@ Date:  06-May-2023
 
 ## +++++++++++++++++++++++++++ DAY 3 ++++++++++++++++++++++++++++
 
-## Jenkins integration with Sonarqube server.
+### Configure jenkins pipeline job. 
+```
+Login Jenkins > New Item > Project-1 > Pipeline > OK
+
+		               Pipeline:
+		                    Definition: Pipeline script from SCM
+		               
+		               SCM: Git
+
+		                 Repositories:
+		                      Repository URL: https://github.com/sunnydevops2022/devops_real_time_project_1.git
+
+		                 Script Path: Jenkinsfile   
+```
+<br/>
+
+### Jenkins integration with Sonarqube server.
 
 <br/>
 
@@ -60,7 +76,7 @@ Create
 ```
 <br/>
 
-## Password less authentication with Kubernetes server.
+### Password less authentication with Kubernetes server.
 ```
 +++++++++++++++ KUBERNETES SERVER ++++++++++++++++++++++
 
@@ -85,7 +101,7 @@ ssh root@<kubernetes_ip>
 ```
 <br/>
 
-## Create credential for Dockerhub server login.
+### Create credential for Dockerhub server login.
 ```
 Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
                                                                                             kind: Secret text
