@@ -72,7 +72,7 @@ ssh-copy-id root@<kubernetes_ip>
 ssh root@<kubernetes_ip>
 ```
 
-## Password less authentication with Kubernetes server.
+## Create credential for Dockerhub server login.
 ```
 Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
                                                                                             kind: Secret text
