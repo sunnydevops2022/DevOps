@@ -16,8 +16,11 @@ Date:  05-May-2023
 
 <br/>
 <br/>
-
 ## +++++++++++++++++++++++++++ DAY 1 ++++++++++++++++++++++++++++
+
+### Overview of project-1
+
+## +++++++++++++++++++++++++++ DAY 2 ++++++++++++++++++++++++++++
 
 ### Setup EC2 servers along with Github account.
 
@@ -39,7 +42,7 @@ Date:  05-May-2023
 <br/>
 <br/>
 
-## +++++++++++++++++++++++++++ DAY 2 ++++++++++++++++++++++++++++
+## +++++++++++++++++++++++++++ DAY 3 ++++++++++++++++++++++++++++
 
 ## Jenkins integration with Sonarqube server.
 
@@ -48,7 +51,7 @@ Date:  05-May-2023
 Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
                                                                                             kind: Secret text
                                                                                             Scope: Global
-                                                                                            Secret: token
+                                                                                            Secret: ******
                                                                                             ID: SONAR_TOKEN
                                                                                             Des: SONAR_TOKEN
 Create
@@ -69,14 +72,26 @@ ssh-copy-id root@<kubernetes_ip>
 ssh root@<kubernetes_ip>
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
+## Password less authentication with Kubernetes server.
+```
+Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
+                                                                                            kind: Secret text
+                                                                                            Scope: Global
+                                                                                            Secret: ******
+                                                                                            ID: DOCKERHUB_USER
+                                                                                            Des: DOCKERHUB_USER
+Create
 
-## +++++++++++++++++++++++++++ DAY 3 ++++++++++++++++++++++++++++
+##################################
 
-
+Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
+                                                                                            kind: Secret text
+                                                                                            Scope: Global
+                                                                                            Secret: ******
+                                                                                            ID: DOCKERHUB_PASS
+                                                                                            Des: DOCKERHUB_PASS
+Create
+```
 
 <br/>
 <br/>
