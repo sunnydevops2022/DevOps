@@ -8,6 +8,9 @@ Date:  06-May-2023
 
 ### Overview of project-1
 
+<br/>
+<br/>
+
 ## +++++++++++++++++++++++++++ DAY 2 ++++++++++++++++++++++++++++
 
 ### Configure all below pre-requisites for project.
@@ -25,8 +28,6 @@ Date:  06-May-2023
 1. **[Dockerhub Account](https://hub.docker.com/)**
 
 
-<br/>
-<br/>
 <br/>
 <br/>
 
