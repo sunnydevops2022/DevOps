@@ -74,7 +74,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 ### Check the installation (and version) by entering the following:
 ```
-docker version
+docker --version
 ```
 
 
