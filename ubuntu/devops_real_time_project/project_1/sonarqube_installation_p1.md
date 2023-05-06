@@ -107,10 +107,3 @@ P: admin
 
 New Pass: admin@123
 ```
-
-## Jenkins integration step temp
-```
-- Magage jenkins > configure system > Global properties > sonar_token
-- Magage jenkins > configure system > Global properties > docker_user
-- Magage jenkins > configure system > Global properties > sonar_password 
-```
