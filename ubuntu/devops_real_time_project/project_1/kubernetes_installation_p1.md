@@ -11,9 +11,24 @@ CPU                  : 2 Core
 EC2 Instance         : t3a.small
 ```
 
-### Update repository of ubuntu
+# ON MASTER NODE
+
+### Switch to root user & Update repository of ubuntu
 ```
+sudo -i
 sudo apt update
+```
+
+### Start by disabling the swap memory
+```
+sudo swapoff -a
+sed -i 's/^\(.*swap.*\)$/#\1/' /etc/fstab
+```
+
+### Change time hostname
+```
+sudo hostnamectl set-hostname k8-master
+bash
 ```
 
 ### Change time zone
@@ -25,68 +40,7 @@ timedatectl
 date
 ```
 
-### Change time hostname
-```
-hostnamectl set-hostname k8-master
-bash
-```
-
-### Install Java
-```
-Pending        
-```
-
-# SETTING UP KUBERNETES CLUSTER SERVER ON AWS WITH Ubuntu 18.04/20.04 LTS STEP BY STEP !!!
-```
-Last Tested Date : 24-Apr-2023
-```
-
-# ON MASTER NODE
-
-### Switch to root user
-```
-sudo -i
-
-$ cat /etc/os-release
-NAME="Ubuntu"
-VERSION="20.04.5 LTS (Focal Fossa)"
-ID=ubuntu
-ID_LIKE=debian
-PRETTY_NAME="Ubuntu 20.04.5 LTS"
-VERSION_ID="20.04"
-HOME_URL="https://www.ubuntu.com/"
-SUPPORT_URL="https://help.ubuntu.com/"
-BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
-PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-VERSION_CODENAME=focal
-UBUNTU_CODENAME=focal
-```
-
-### Start by disabling the swap memory
-```
-sudo swapoff -a
-sed -i 's/^\(.*swap.*\)$/#\1/' /etc/fstab
-```
-
-
-
-### Set Hostname
-```
-sudo hostnamectl set-hostname master-node
-
-bash
-```
-
-
-
-### Update the package list with the command:
-```
-sudo apt-get update
-```
-
-
-
-### Next, install Docker with the command:
+### Install Docker with the command
 ```
 sudo apt-get install -y \
     apt-transport-https \
