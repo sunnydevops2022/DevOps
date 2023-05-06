@@ -62,16 +62,15 @@ Create
 
 ## Password less authentication with Kubernetes server.
 ```
-## ON KUBERNETES SERVER 
++++++++++++++++ KUBERNETES SERVER ++++++++++++++++++++++
 
+passwd root
 cp -r /etc/ssh/sshd_config /etc/ssh/sshd_config_orig
 sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
 sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" /etc/ssh/sshd_config
 systemctl restart sshd.service
 
-+++++++++++++++++++++++++++++++++++++
-
-## ON ANSIBLE SERVER
++++++++++++++++ ANSIBLE SERVER ++++++++++++++++++++++
 
 vim /etc/ansible/hosts
 
