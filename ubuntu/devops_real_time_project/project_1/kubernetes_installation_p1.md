@@ -1,5 +1,17 @@
 ## KUBERNETES CLUSTER INSTALLATION
 
+# Pre-Requisites
+
+### Kubernetes Cluster Server Details:
+```
+Operating System     : Ubuntu 18.04/20.04 LTS		 # master-node
+Hostname             : master-node
+IP Address           : 192.168.0.50/24
+RAM                  : 2 GB
+CPU                  : 2 Core
+EC2 Instance         : t3a.small
+```
+
 #### Update repository of ubuntu
 ```
 sudo apt update
@@ -29,44 +41,6 @@ Pending
 ```
 Last Tested Date : 24-Apr-2023
 ```
-
-
-# Pre-Requisites
-
-### Kubernetes Cluster Server Details:
-```
-Operating System     : Ubuntu 18.04/20.04 LTS		 # master-node
-Hostname             : master-node
-IP Address           : 192.168.0.50/24
-RAM                  : 2 GB
-CPU                  : 2 Core
-```
-### Nodes Details:
-```
-Operating System     : Ubuntu 18.04/20.04 LTS		 # worker-1
-Hostname             : worker-1
-IP Address           : 192.168.0.51/24
-RAM                  : 1 GB
-CPU                  : 1 Core
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Operating System     : Ubuntu 18.04/20.04 LTS		 # worker-2                   
-Hostname             : worker-2
-IP Address           : 192.168.0.52/24
-RAM                  : 1 GB
-CPU                  : 1 Core
-```
-**###################################################################################**
-```
-##< Kubernetes Installation on Ubuntu 18.04/20.04 LTS >##
-
-Kubernetes is an open source platform for managing container technologies such as Docker.
-
-Docker lets you create containers for a pre-configured image and application. Kubernetes provides the next step, allowing you to balance loads 
-between containers and run multiple containers across multiple systems
-```
-</br>
 
 # ON MASTER NODE
 
