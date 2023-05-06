@@ -4,25 +4,13 @@
 ```
 Date:  06-May-2023
 ```
-
-### Pre-Requisites
-1. Install Jenkins
-1. Install Ansible
-1. Install Apache Maven
-1. Install Sonarqube
-1. Install Kubernetes Cluster
-1. Git Account
-1. Dockerhub Account
-
-<br/>
-<br/>
 ## +++++++++++++++++++++++++++ DAY 1 ++++++++++++++++++++++++++++
 
 ### Overview of project-1
 
 ## +++++++++++++++++++++++++++ DAY 2 ++++++++++++++++++++++++++++
 
-### Setup EC2 servers along with Github account.
+### Configure all below pre-requisites for project.
 
 <br/>
 
