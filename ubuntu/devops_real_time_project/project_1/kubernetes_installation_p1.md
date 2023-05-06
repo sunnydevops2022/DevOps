@@ -27,8 +27,10 @@ sed -i 's/^\(.*swap.*\)$/#\1/' /etc/fstab
 
 ### Change time hostname
 ```
+hostname
 sudo hostnamectl set-hostname k8-master
 bash
+hostname
 ```
 
 ### Change time zone
