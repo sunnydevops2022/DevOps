@@ -184,7 +184,12 @@ spec:
 
 ### Check pod status
 ```
-kubectl get pod
+kubectl apply -f testing.yaml
+```
+
+### After check delete the pod
+```
+kubectl delete -f testing.yaml
 ```
 
 ## `*************************   EOF   *************************`
