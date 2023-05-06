@@ -5,7 +5,7 @@
 ### Kubernetes Cluster Server Details:
 ```
 Operating System     : Ubuntu
-Hostname             : master-node
+Hostname             : k8-master
 RAM                  : 2 GB
 CPU                  : 2 Core
 EC2 Instance         : t3a.small
@@ -169,6 +169,7 @@ source $HOME/.kube/<filename.sh>			 //after system restart it won't work
 </br>
 
 # KUBERNETES CLUSTER TESTING
+
 cat testing.yaml
 ```
 apiVersion: v1
@@ -179,6 +180,11 @@ spec:
   containers:
   - name: testing
     image: nginx
+```
+
+### Check pod status
+```
+kubectl get pod
 ```
 
 ## `*************************   EOF   *************************`
