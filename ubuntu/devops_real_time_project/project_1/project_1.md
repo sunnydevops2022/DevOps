@@ -35,7 +35,7 @@ Date:  07-May-2023
 
 ### Configure jenkins pipeline job. 
 ```
-Login Jenkins > New Item > Project-1 > Pipeline > OK
+Login Jenkins > New Item > project-1 > Pipeline > OK
 
 		               Pipeline:
 		                    Definition: Pipeline script from SCM
@@ -56,7 +56,7 @@ Login Jenkins > New Item > Project-1 > Pipeline > OK
 ### Login Sonarqube server
 ```
 Sonarqube > My Account > Security > Generate Tokens
-                                          Name    : Porject-1
+                                          Name    : porject-1
 					  Type    : Global Analysis Token
 					  Expires : 30 Days
 Generate
