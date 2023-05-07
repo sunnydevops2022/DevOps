@@ -110,6 +110,12 @@ Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestrict
                                                                                             Des: DOCKERHUB_PASS
 Create
 ```
+<br/>
+
+### Github integrate with Jenkins.
+```
+Pending
+```
 
 <br/>
 <br/>
