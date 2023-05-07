@@ -154,7 +154,10 @@ kubectl get nodes
 
 ### Remove taint from k8-master node
 ```
-kubectl taint nodes k8-master node-role.kubernetes.io/master:NoSchedule-
+kubectl taint nodes k8-master node-role.kubernetes.io/control-plane:NoSchedule-            ## v1.27.1
+OR
+kubectl taint nodes k8-master node-role.kubernetes.io/master:NoSchedule-                   ## v1.21.14
+
 ```
 
 </br>
