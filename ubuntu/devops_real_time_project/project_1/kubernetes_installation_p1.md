@@ -139,17 +139,25 @@ kubectl get nodes
 
 NAME          STATUS   ROLES    AGE    VERSION
 master-node   NOtReady    master   8m3s   v1.18.5
+```
 
-## Deploy Pod Network to Cluster
+### Deploy Pod Network to Cluster
+```
 sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
 
-## Verify that everything is running and communicating
+### Verify that everything is running and communicating
+```
 kubectl get pod --all-namespaces
+```
 
-## Cross check your cluster is running status
+### Cross check your cluster is running status
+```
 kubectl get nodes
+```
 
-## Remove taint from k8-master node
+### Remove taint from k8-master node
+```
 kubectl taint nodes k8-master node-role.kubernetes.io/master:NoSchedule-
 ```
 
