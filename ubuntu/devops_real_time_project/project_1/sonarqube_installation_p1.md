@@ -48,17 +48,21 @@ cd /opt/
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.0.0.68432.zip
 OR
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.2.46101.zip
+apt install unzip -y
 unzip sonarqube-10.0.0.68432.zip
+ls
+rm -rf sonarqube-10.0.0.68432.zip
 mv sonarqube-10.0.0.68432 sonarqube
+ls
 ```
 
 ### Create sonar user
 ```
 useradd -d /opt/sonarqube sonar
 cat /etc/passwd | grep sonar
-ls -l /opt/sonarqube
+ls -ld /opt/sonarqube
 chown -R sonar:sonar /opt/sonarqube
-ls -l /opt/sonarqube
+ls -ld /opt/sonarqube
 ```
 
 ### Create custom service for sonar
@@ -107,6 +111,7 @@ systemctl status sonarqube.service
 
 ### Check 9000 port is used or not
 ```
+apt install net-tools
 netstat -plant | grep 9000
 ```
 
