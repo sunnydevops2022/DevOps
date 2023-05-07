@@ -53,6 +53,17 @@ Login Jenkins > New Item > Project-1 > Pipeline > OK
 
 <br/>
 
+### Login Sonarqube server
+```
+Sonarqube > My Account > Security > Generate Tokens
+                                          Name    : Porject-1
+					  Type    : Global Analysis Token
+					  Expires : 30 Days
+Generate
+
+After that copy token & save it.
+```
+
 ### Go to Jenkins and install SonarQube Scanner plugin.
 ```
 Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
