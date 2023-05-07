@@ -42,34 +42,12 @@ timedatectl
 date
 ```
 
-### Install Docker with the command
+### Install Docker, start service
 ```
-sudo apt-get install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
+sudo apt-get update
+sudo apt-get install docker.io -y
+sudo systemctl start docker
 ```    
-
-### Add Docker’s official GPG key
-```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -	
-```
-
-
-### Add Docker Repo
-```
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-```   
-
-### Install the latest version of Docker Engine and containerd
-```
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-```
 
 
 ### Check the installation (and version) by entering the following
@@ -98,15 +76,15 @@ sudo systemctl status docker
 
 ### Add Kubernetes Repo
 ```
-{
-  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-}
+sudo apt-get install -y apt-transport-https ca-certificates curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 ### Install kubeadm kubelet kubectl
 ```
-apt update && apt-get install -y kubelet=1.21* kubeadm=1.21* kubectl=1.21*                 ## For 1.21 version
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
@@ -125,7 +103,7 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 sudo mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/configM<
 ```
 
 
