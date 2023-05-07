@@ -76,16 +76,8 @@ Create
 ```
 <br/>
 
-### Password less authentication with Kubernetes server.
+### Configure inventry file & Password less authentication with Kubernetes server.
 ```
-+++++++++++++++ KUBERNETES SERVER ++++++++++++++++++++++
-
-passwd root
-cp -r /etc/ssh/sshd_config /etc/ssh/sshd_config_orig
-sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
-sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" /etc/ssh/sshd_config
-systemctl restart sshd.service
-
 +++++++++++++++ ANSIBLE SERVER ++++++++++++++++++++++
 
 vim /etc/ansible/hosts
@@ -98,6 +90,13 @@ ssh root@<kubernetes_ip>
 ssh-keygen
 ssh-copy-id root@<kubernetes_ip>
 ssh root@<kubernetes_ip>
++++++++++++++++ KUBERNETES SERVER ++++++++++++++++++++++
+
+passwd root
+cp -r /etc/ssh/sshd_config /etc/ssh/sshd_config_orig
+sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" /etc/ssh/sshd_config
+systemctl restart sshd.service
 ```
 <br/>
 
