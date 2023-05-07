@@ -103,7 +103,7 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 sudo mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/configM<
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 
@@ -132,10 +132,8 @@ kubectl get nodes
 
 ### Remove taint from k8-master node
 ```
-kubectl taint nodes k8-master node-role.kubernetes.io/control-plane:NoSchedule-            ## v1.27.1
-OR
-kubectl taint nodes k8-master node-role.kubernetes.io/master:NoSchedule-                   ## v1.21.14
-
+## For v1.27.1
+kubectl taint nodes k8-master node-role.kubernetes.io/control-plane:NoSchedule-            
 ```
 
 </br>
