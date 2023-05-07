@@ -9,6 +9,7 @@ Hostname             : k8-master
 RAM                  : 2 GB
 CPU                  : 2 Core
 EC2 Instance         : t3a.small
+Disk Size            : 30 GB
 ```
 
 # ON MASTER NODE
