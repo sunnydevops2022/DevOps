@@ -79,6 +79,9 @@ Create
 ### Configure inventry file & Password less authentication with Kubernetes server.
 ```
 +++++++++++++++ ANSIBLE SERVER ++++++++++++++++++++++
+cat /etc/ansible/hosts
+
+> /etc/ansible/hosts
 
 vim /etc/ansible/hosts
 
@@ -90,6 +93,7 @@ ssh root@<kubernetes_ip>
 ssh-keygen
 ssh-copy-id root@<kubernetes_ip>
 ssh root@<kubernetes_ip>
+
 +++++++++++++++ KUBERNETES SERVER ++++++++++++++++++++++
 
 passwd root
