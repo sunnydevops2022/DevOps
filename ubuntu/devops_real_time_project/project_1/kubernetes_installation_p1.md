@@ -52,7 +52,7 @@ sudo apt-get install -y \
     software-properties-common
 ```    
 
-### Add Docker’s official GPG key:
+### Add Docker’s official GPG key
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -	
 ```
@@ -72,7 +72,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
 
 
-### Check the installation (and version) by entering the following:
+### Check the installation (and version) by entering the following
 ```
 docker --version
 ```
@@ -84,13 +84,13 @@ sudo cat /sys/class/dmi/id/product_uuid
 ```
 
 
-### Set Docker to launch at boot by entering the following:
+### Set Docker to launch at boot by entering the following
 ```
 sudo systemctl enable docker
 ```
 
 
-### Verify Docker is running:
+### Verify Docker is running
 ```
 sudo systemctl status docker
 ```
@@ -114,7 +114,7 @@ apt update && apt-get install -y kubelet=1.21* kubeadm=1.21* kubectl=1.21*      
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-### Verify the installation with:
+### Verify the installation with kubeadm
 ```
 kubeadm version
 kubectl version --short
@@ -125,7 +125,7 @@ kubectl version --short
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 
-### Enter the following to create a directory for the cluster: To start using your cluster, you need to run the following as a regular user:
+### Enter the following to create a directory for the cluster: To start using your cluster, you need to run the following as a regular user
 ```
 sudo mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -133,7 +133,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 
-### Now check to see if the kubectl command is activated.
+### Now check to see if the kubectl command is activated
 ```
 kubectl get nodes
 
