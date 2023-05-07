@@ -1,5 +1,16 @@
 ## SONARQUBE INSTALLATION
 
+## Pre-Requisites
+
+### Jenkins Server Details:
+```
+Operating System     : Ubuntu
+Hostname             : sonarqube
+RAM                  : 2 GB
+CPU                  : 1 Core
+EC2 Instance         : t2.small
+```
+
 #### Update repository of ubuntu
 ```
 Download URL:  https://www.sonarsource.com/products/sonarqube/downloads/
