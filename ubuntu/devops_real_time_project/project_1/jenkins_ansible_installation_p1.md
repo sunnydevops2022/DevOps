@@ -1,5 +1,16 @@
 ## ++++++++++++++++++ JENKINS INSTALLATION ++++++++++++++++++
 
+## Pre-Requisites
+
+### Jenkins Server Details:
+```
+Operating System     : Ubuntu
+Hostname             : jenkins-ansible
+RAM                  : 2 GB
+CPU                  : 1 Core
+EC2 Instance         : t2.small
+```
+
 #### Update repository of ubuntu
 ```
 sudo -i
