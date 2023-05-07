@@ -135,37 +135,22 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ### Now check to see if the kubectl command is activated.
 ```
-kubectl get nodes								//Status of Nodes
+kubectl get nodes
 
-root@master-node:~# kubectl get nodes
 NAME          STATUS   ROLES    AGE    VERSION
 master-node   NOtReady    master   8m3s   v1.18.5
-root@master-node:~#
 
-# Deploy Pod Network to Cluster
+## Deploy Pod Network to Cluster
 sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
-# Verify that everything is running and communicating:
+## Verify that everything is running and communicating
+kubectl get pod --all-namespaces
 
-root@master-node:~# kubectl get pods --all-namespaces     //Status of PODS
-NAMESPACE      NAME                                  READY   STATUS    RESTARTS   AGE
-kube-flannel   kube-flannel-ds-6slf4                 1/1     Running   1          8m44s
-kube-system    coredns-66bff467f8-bzr6k              1/1     Running   1          8m55s
-kube-system    coredns-66bff467f8-r5jbq              1/1     Running   1          8m55s
-kube-system    etcd-master-node                      1/1     Running   1          9m10s
-kube-system    kube-apiserver-master-node            1/1     Running   1          9m10s
-kube-system    kube-controller-manager-master-node   1/1     Running   1          9m9s
-kube-system    kube-proxy-smh7n                      1/1     Running   1          8m55s
-kube-system    kube-scheduler-master-node            1/1     Running   1          9m10s
-root@master-node:~#
+## Cross check your cluster is running status
+kubectl get nodes
 
-kubectl get -o wide pods --all-namespaces 		//Detailed status of PODS
-
-# Kubernetes Bash Completion
-cd ~										 //Change directory to user home
-cd .kube   							    	 //.kube folder should be exist
-kubectl completion bash > <filename.sh>      //
-source $HOME/.kube/<filename.sh>			 //after system restart it won't work
+## Remove taint from k8-master node
+kubectl taint nodes k8-master node-role.kubernetes.io/master:NoSchedule-
 ```
 
 </br>
@@ -187,6 +172,11 @@ spec:
 ### Check pod status
 ```
 kubectl apply -f testing.yaml
+```
+
+### Check pod status
+```
+kubectl get pod
 ```
 
 ### After check delete the pod
