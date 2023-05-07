@@ -40,7 +40,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 sudo apt-get update
-sudo apt-get install jenkins=2.361.3
+sudo apt-get install jenkins=2.361.3 -y
 ```
 
 ### Service start
@@ -86,7 +86,7 @@ sudo apt-add-repository ppa:ansible/ansible
 ### Now fetch latest update & install Ansible
 ```
 sudo apt update
-sudo apt-get install ansible
+sudo apt-get install ansible -y
 ```
 
 ### Now check Ansible version
