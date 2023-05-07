@@ -133,7 +133,17 @@ Create
 
 ### Github integrate with Jenkins.
 ```
-Pending
++++++++++++++++ GITHUB ACCOUNT ++++++++++++++++++++++
+Github > Repository > Settings > Webhooks > Add Webhooks >
+						Payload UR   : http://<jenkins_ip>:8080/github-webhook/
+						Content type : application/json
+
+						Just the push event.
+						
++++++++++++++++ JENKINS SERVER ++++++++++++++++++++++						
+
+Jenkins > project-1 > Configure > Build Triggers > 
+                                          GitHub hook trigger for GITScm polling
 ```
 
 <br/>
