@@ -64,7 +64,7 @@ Generate
 After that copy token & save it.
 ```
 
-### Go to Jenkins and install SonarQube Scanner plugin.
+### Go to Jenkins and create credential for Sonar token
 ```
 Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
                                                                                             kind: Secret text
