@@ -106,11 +106,7 @@ sudo systemctl status docker
 
 ### Install kubeadm kubelet kubectl
 ```
-apt update && apt install -y kubeadm=1.18.5-00 kubelet=1.18.5-00 kubectl=1.18.5-00         ## For 1.18 version
-OR
 apt update && apt-get install -y kubelet=1.21* kubeadm=1.21* kubectl=1.21*                 ## For 1.21 version
-
-
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
