@@ -161,7 +161,14 @@ kubectl taint nodes k8-master node-role.kubernetes.io/master:NoSchedule-
 
 # KUBERNETES CLUSTER TESTING
 
-cat testing.yaml
+### Check pod status
+```
+kubectl get pod
+```
+
+### Create testing.yml and insert below content
+
+vim testing.yaml
 ```
 apiVersion: v1
 kind: Pod
