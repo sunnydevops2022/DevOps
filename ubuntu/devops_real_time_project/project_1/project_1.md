@@ -98,14 +98,14 @@ vim /etc/ansible/hosts
 <kubernetes_ip>
 
 cat /etc/ansible/hosts
-
-ansible -m ping kubernetes
+su - jenkins
+ansible -m ping kubernetes -u root
 ssh root@<kubernetes_ip>
 ssh-keygen
 ssh-copy-id root@<kubernetes_ip>
 ssh root@<kubernetes_ip>
 
-ansible -m ping kubernetes
+ansible -m ping kubernetes -u root
 ```
 <br/>
 
