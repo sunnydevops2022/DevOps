@@ -13,8 +13,9 @@ EC2 Instance         : t2.small
 
 #### Update repository of ubuntu
 ```
-Download URL:  https://www.sonarsource.com/products/sonarqube/downloads/
+## Download URL:  https://www.sonarsource.com/products/sonarqube/downloads/
 
+sudo -i
 sudo apt update
 ```
 
