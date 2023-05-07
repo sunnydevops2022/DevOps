@@ -15,7 +15,7 @@ timedatectl
 date
 ```
 
-### Change time hostname
+### Change hostname
 ```
 hostname
 hostnamectl set-hostname jenkins-ansible
