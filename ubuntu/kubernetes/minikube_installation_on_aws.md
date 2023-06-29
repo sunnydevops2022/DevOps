@@ -20,7 +20,7 @@ NOTE : "t3.small" perfect suit for this lab
 #### Change hostname
 ```
 $ whoami
-$ sudo hostnamectl set-hostname terraform
+$ sudo hostnamectl set-hostname minikube
 $ bash
 $ hostname
 ```
