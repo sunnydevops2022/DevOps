@@ -121,7 +121,7 @@ mvn --version
 ```
 cd /opt/
 ls
-wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
+wget https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.zip
 apt-get install unzip -y
 unzip apache-maven-3.9.1-bin.zip
 ls
