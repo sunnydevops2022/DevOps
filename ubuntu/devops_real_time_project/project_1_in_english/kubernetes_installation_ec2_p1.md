@@ -112,8 +112,8 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 kubectl get nodes
 
-NAME          STATUS   ROLES    AGE    VERSION
-master-node   NOtReady    master   8m3s   v1.18.5
+NAME        STATUS     ROLES           AGE   VERSION
+k8-master   NotReady   control-plane   44s   v1.27.3
 ```
 
 ### Deploy Pod Network to Cluster
