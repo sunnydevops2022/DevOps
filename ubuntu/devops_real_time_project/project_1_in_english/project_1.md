@@ -1,5 +1,3 @@
-![image](https://github.com/sunnydevops2022/DevOps/assets/118091414/235fded4-bfa3-48ec-899e-cd4688e2a591)# +++++ PROJECT-1 +++++
-
 ### Last Tested
 ```
 Date:  07-May-2023
