@@ -76,6 +76,17 @@ Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestrict
                                                                                             ID: SONAR_TOKEN
                                                                                             Des: SONAR_TOKEN
 Create
+
+++++++
+
+Dashboard > Manage Jenkins > Credentials > System Global credentials (unrestricted) > Add credentials > 
+                                                                                            kind: Secret text
+                                                                                            Scope: Global
+                                                                                            Secret: ******
+                                                                                            ID: SONAR_PRIVATE_IP
+                                                                                            Des: SONAR_PRIVATE_IP
+Create
+
 ```
 <br/>
 
