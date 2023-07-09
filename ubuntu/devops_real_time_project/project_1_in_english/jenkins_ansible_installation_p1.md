@@ -123,9 +123,9 @@ cd /opt/
 ls
 wget https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.zip
 apt-get install unzip -y
-unzip apache-maven-3.9.1-bin.zip
+unzip apache-maven-3.9.3-bin.zip
 ls
-rm -rf apache-maven-3.9.1-bin.zip
+rm -rf apache-maven-3.9.3-bin.zip
 ls
 ```
 
@@ -134,7 +134,7 @@ ls
 vim ~/.bashrc
 
 ## Add end of the file & save it.
-export M2_HOME=/opt/apache-maven-3.9.1
+export M2_HOME=/opt/apache-maven-3.9.3
 export PATH=$PATH:$M2_HOME/bin
 
 source ~/.bashrc
