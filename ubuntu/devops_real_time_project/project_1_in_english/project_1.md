@@ -46,6 +46,9 @@ Login Jenkins > New Item > project-1 > Pipeline > OK
 
 		                 Repositories:
 		                      Repository URL: https://github.com/sunnydevops2022/devops_real_time_project_1_english.git
+                                
+                                 Branch Specifier
+                                         */main
 
 		                 Script Path: Jenkinsfile   
 ```
