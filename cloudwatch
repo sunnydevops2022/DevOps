@@ -1,1 +1,106 @@
+vi metric_data_queries
+
+
+[
+    {
+        "Id": "m1",
+        "MetricStat": {
+            "Metric": {
+                "Namespace": "AWS/CloudFront",
+                "MetricName": "BytesUploaded",
+                "Dimensions": [
+                    { "Name": "Region", "Value": "Global" },
+                    { "Name": "DistributionId", "Value": "E3CWZ2DCBC7S0C" }
+                ]
+            },
+            "Period": 604800,
+            "Stat": "Sum"
+        },
+        "ReturnData": true
+    },
+    {
+        "Id": "m2",
+        "MetricStat": {
+            "Metric": {
+                "Namespace": "AWS/CloudFront",
+                "MetricName": "BytesDownloaded",
+                "Dimensions": [
+                    { "Name": "Region", "Value": "Global" },
+                    { "Name": "DistributionId", "Value": "E3CWZ2DCBC7S0C" }
+                ]
+            },
+            "Period": 604800,
+            "Stat": "Sum"
+        },
+        "ReturnData": true
+    },
+    {
+        "Id": "m3",
+        "MetricStat": {
+            "Metric": {
+                "Namespace": "AWS/CloudFront",
+                "MetricName": "Requests",
+                "Dimensions": [
+                    { "Name": "Region", "Value": "Global" },
+                    { "Name": "DistributionId", "Value": "E3CWZ2DCBC7S0C" }
+                ]
+            },
+            "Period": 604800,
+            "Stat": "Sum"
+        },
+        "ReturnData": true
+    },
+    {
+        "Id": "m4",
+        "MetricStat": {
+            "Metric": {
+                "Namespace": "AWS/CloudFront",
+                "MetricName": "TotalErrorRate",
+                "Dimensions": [
+                    { "Name": "Region", "Value": "Global" },
+                    { "Name": "DistributionId", "Value": "E3CWZ2DCBC7S0C" }
+                ]
+            },
+            "Period": 604800,
+            "Stat": "Sum"
+        },
+        "ReturnData": true
+    },
+    {
+        "Id": "m5",
+        "MetricStat": {
+            "Metric": {
+                "Namespace": "AWS/CloudFront",
+                "MetricName": "4xxErrorRate",
+                "Dimensions": [
+                    { "Name": "Region", "Value": "Global" },
+                    { "Name": "DistributionId", "Value": "E3CWZ2DCBC7S0C" }
+                ]
+            },
+            "Period": 604800,
+            "Stat": "Sum"
+        },
+        "ReturnData": true
+    }
+]
+
+
+
+this query get metrics over 7-day intervals.
+
+
+
+*******************************************************************************************************************************************************************************************************
+
+
+
+run command:-
+
+aws cloudwatch get-metric-data \
+    --start-time "2023-08-01T00:00:00Z" \
+    --end-time "2023-08-11T23:59:59Z" \
+    --metric-data-queries file:///home/ubuntu/metric_data_queries \
+    --output json | jq '.MetricDataResults[] | select(.Label == "BytesDownloaded").Values |= map(. / (1024*1024*1024) | "\(round) GB")'
+
+
 
