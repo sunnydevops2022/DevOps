@@ -1,0 +1,37 @@
+*****************************************  MASTER  ***************************************
+apt upadte 
+apt install -y ansible
+cd .ssh
+vim ansible_key
+chmod 700 -R /home/ubuntu/.ssh
+chmod 600 -R /home/ubuntu/.ssh/*
+chown 700 -R /home/ubuntu/.ssh
+chown 700 -R /home/ubuntu/.ssh/*
+ssh -i /home/ubuntu/.ssh/ansible_key ubuntu@****ip*****     ***exit***
+cat /etc/ansible/hosts      ******No such file or directory*******
+cd /home/ubuntu
+mkdir ansible
+cd ansible
+vim hosts
+		******************************************
+		[servers]
+		server1 ansible_host=13.127.182.178
+
+
+		[all:vars]
+		ansible_python_interpreter=/usr/bin/python3
+		****************  SAVE *********************
+
+ansible-inventory --list -y -i /home/ubuntu/ansible/hosts
+ansible all -m ping	
+	******[WARNING]: No inventory was parsed, only implicit localhost is available
+	******[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+ansible all -m ping -i /home/ubuntu/ansible/hosts --private-key=/home/ubuntu/.ssh/ansible_key -u ubuntu
+
+
+
+
+
+***************************************  NODE  *******************************************
+
