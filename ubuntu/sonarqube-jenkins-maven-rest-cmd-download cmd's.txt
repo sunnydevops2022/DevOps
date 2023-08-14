@@ -1,0 +1,209 @@
+************************************************************************************************
+
+************************************* ANSIBLE  ************************************************
+
+
+*****************************************  MASTER  ***************************************
+apt upadte 
+apt install -y ansible
+cd .ssh
+vim ansible_key
+chmod 700 -R /home/ubuntu/.ssh
+chmod 600 -R /home/ubuntu/.ssh/*
+chown 700 -R /home/ubuntu/.ssh
+chown 700 -R /home/ubuntu/.ssh/*
+ssh -i /home/ubuntu/.ssh/ansible_key ubuntu@****ip*****     ***exit***
+cat /etc/ansible/hosts      ******No such file or directory*******
+cd /home/ubuntu
+mkdir ansible
+cd ansible
+vim hosts
+		******************************************
+		[servers]
+		server1 ansible_host=13.127.182.178
+
+
+		[all:vars]
+		ansible_python_interpreter=/usr/bin/python3
+		****************  SAVE *********************
+
+ansible-inventory --list -y -i /home/ubuntu/ansible/hosts
+ansible all -m ping	
+	******[WARNING]: No inventory was parsed, only implicit localhost is available
+	******[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+ansible all -m ping -i /home/ubuntu/ansible/hosts --private-key=/home/ubuntu/.ssh/ansible_key -u ubuntu
+
+
+
+
+
+***************************************  NODE  *******************************************
+*****************************************************************************************************************************************************************
+*****************************************************************************************************************************************************************
+
+
+
+-------------------------------------------- jenkins ---------------------------------------------
+apt-get -y update
+apt install -y openjdk-17-jre
+java -version
+
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+
+
+
+ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+
+  sudo apt-get -y update
+  sudo apt-get install -y fontconfig openjdk-11-jre
+  sudo apt-get install -y jenkins
+
+************************************************************************************************
+
+
+
+
+-------------------------------------------- sonarqube-9.9.0.65466 ----------------------------
+
+
+java -version
+
+	"openjdk-17"
+
+
+apt install unzip wget
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.0.65466.zip
+unzip sonarqube-9.9.0.65466.zip -d /opt
+adduser sonar
+chown -R sonar:sonar /opt/sonarqube-9.9.0.65466
+su sonar
+cd /opt/sonarqube-9.9.0.65466/bin/linux-x86-64
+./sonar.sh console
+
+
+************************************************************************************************
+
+
+
+
+------------------------------------------- maven-3.6.3 ----------------------------------------
+
+
+apt-get update
+apt-get install maven 
+mvn -v
+
+
+**********************************************************************************************************
+
+
+**************************************** kubernates *******************************************************************************************************************
+
+
+
+            kubernates - kubeadm*
+
+
+Step1:
+On Master & worker node
+sudo su
+apt-get update  
+apt-get install docker.io -y
+service docker restart  
+sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/kubernetes-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+apt-get update
+apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y  
+
+
+
+Step2:
+On Master:
+   kubeadm init --pod-network-cidr=192.168.0.0/16
+******************   Copy the token and paste it into the worker node.**********************************
+
+
+
+
+Step3:
+On Master: 
+  exit
+    mkdir -p $HOME/.kube
+    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+   
+
+
+step4:
+On Master:
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
+
+
+****************************************************************************************************end
+
+
+
+----------------------------------------- jenkins pipeline ------------------------------------------
+ 
+
+pipeline {
+    agent any
+	
+	stages {
+	    stage('Git CheckOut') {
+		    steps {
+			   checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prajeet1000/utk-mehtabsir.git']]])
+			}
+		}
+        stage('Clean and Install') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+        stage ('Code Quality'){
+            steps {
+                    withSonarQubeEnv('sonarqube server') {
+                sh 'mvn sonar:sonar'
+                }
+             }
+        }
+		
+    }
+}
+
+
+
+
+******************************************************************************************************************************************************************************
+
+------------------------------------------------------------------ reset ubuntu machine ----------------------------------------------------------------------------------
+
+
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+sudo apt clean
+
+
+
+******************************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
