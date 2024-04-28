@@ -1,11 +1,14 @@
-<h1 align="center">🔥 AWS-CLI INSTALLATION ON UBUNTU 🔥</h1>
-
 <h2 align="center">🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍</h2>
 
 <br/>
 
 ### 🟢 Whatsapp DevOps Jobs Group : https://chat.whatsapp.com/J1oriqe9ckc9NolOiStPti
 ### 🚹 Telegram DevOps Jobs Group : https://t.me/DevOps_Linux_Jobs
+### 🟢 LinkedIn Profile Link      : https://www.linkedin.com/in/sunnygodiwal
+
+<br/>
+
+<h1 align="center">🔥 AWS-CLI INSTALLATION ON UBUNTU 🔥</h1>
 
 <br/>
 
@@ -13,12 +16,12 @@
 ## 🔹STEP-1
 #### Change hostname
 ```
-$ whoami
-$ sudo -i 
-$ whoami
-$ hostnamectl set-hostname aws-cli
-$ bash
-$ hostname
+whoami
+sudo -i 
+whoami
+hostnamectl set-hostname aws-cli
+bash
+hostname
 ```
 
 <br/>
@@ -26,8 +29,8 @@ $ hostname
 ## 🔹STEP-2
 #### Check OS version & Update Ubuntu packages
 ```
-$ cat /etc/os-release
-$ sudo apt-get update
+cat /etc/os-release
+sudo apt-get update
 ```
 
 <br/>
@@ -35,7 +38,7 @@ $ sudo apt-get update
 ## 🔹STEP-3
 #### Verify Aws-cli install or not ?
 ```
-$ aws --version
+aws --version
 ```
 
 <br/>
@@ -43,7 +46,7 @@ $ aws --version
 ## 🔹STEP-4
 #### Now install Aws-cli
 ```
-$ apt-get install awscli
+apt-get install awscli
 ```
 
 <br/>
@@ -51,8 +54,8 @@ $ apt-get install awscli
 ## 🔹STEP-5
 #### Again Verify Aws-cli
 ```
-$ aws --version
-$ aws
+aws --version
+aws
 ```
 
 <br/>
