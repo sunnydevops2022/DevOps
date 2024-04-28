@@ -4,7 +4,7 @@
 
 ### 🟢 Whatsapp DevOps Jobs Group : https://chat.whatsapp.com/J1oriqe9ckc9NolOiStPti
 ### 🚹 Telegram DevOps Jobs Group : https://t.me/DevOps_Linux_Jobs
-### 🟢 LinkedIn Link : [www.linkedin.com/in/sunnygodiwal](https://www.linkedin.com/in/sunnygodiwal/)
+### 🟢 LinkedIn Profile Link      : https://www.linkedin.com/in/sunnygodiwal
 
 <h1 align="center">🔥 ANSIBLE INSTALLATION 🔥</h1>
 
