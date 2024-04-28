@@ -1,5 +1,17 @@
-# JENKINS INSTALLATION ON UBUNTU
+<h2 align="center">🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍</h2>
 
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+
+- Click 👉 **[Whatsapp DevOps Jobs Group](https://chat.whatsapp.com/J1oriqe9ckc9NolOiStPti)**
+- Click 👉 **[Telegram DevOps Jobs Group](https://t.me/DevOps_Linux_Jobs)**
+- Click 👉 **[YouTube](https://www.youtube.com/@sunnygodiwal007/)**
+- Click 👉 **[GitHub](https://github.com/sunnydevops2022/)**
+- Click 👉 **[LinkedIn](https://www.linkedin.com/in/sunnygodiwal/)**
+
+<br/>
+
+<h1 align="center">🔥 JENKINS INSTALLATION ON UBUNTU 🔥</h1>
 
 #### `**** Please Like & Subscribe My Channel To Motivate Me ****`
 
@@ -67,7 +79,7 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 <br />
 
-#### `**** Please Like & Subscribe My Channel To Motivate Me ****`
+<h2 align="center">🔥🔥 👉 Please Like & Subscribe My Channel To Motivate Me 🔥🔥 🙏 👍</h2>
   
 
 We'll provide DevOps real time project in upcoming video in this channel. So please subscribe my channel.
